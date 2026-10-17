@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+#
+# Steven Bickerton
+# Dept. of Physics/Astronomy, McMaster University
+# bick@physics.mcmaster.ca
+# Made with makeScript, Tue May 20, 2008  18:41:17 DST
+# Host: bender.local
+# Working Directory: /Users/bick/working/aperture_test
+
+
+function usage()
+{
+    echo "Usage: $0"
+}
+
+if [ $# -ne 0 ]; then
+    usage
+    exit 1;
+fi
+
+set -x
+
+
+# target data
+RAWPHOT=sung1999_MNRAS.306.361.dat
+Vcol=11
+BmVcol=13
+RAcol=18   #degrees
+Deccol=19  #degrees
+
+# target params
+#name=m35
+DIST=1100 # sarajedini 2004
+Ebmv=0.255 #sung 1999
+Av=0.79    # 3.1 * Ebmv
+RA=92.27 #RA and Dec for the target center
+DEC=24.34
+
+# scope params
+#HZs= "20 25 30 35 40 45 50 55 60" **
+HZ="40"
+THRU=0.7 # QE=0.85, other=0.85
+RDNOISE=5 
+#LAMLOs="3.0e-7 3.5e-7 4.0e-7 4.5e-7 5.0e-7" **
+LAMLO="4.0e-7"
+#LAMHIs="7.0e-7 7.5e-7 8.0e-7 8.5e-7 **
+LAMHI="7.0e-7" # used only to make diffraction templates
+
+
+#APERTUREs="0.10 0.15 0.20 0.25 0.30 0.35 0.40 0.45 0.50 0.55 0.60"
+#APERTUREs="0.15 0.20 0.30 0.40" **
+APERTUREs="0.30"
+
+#FOVs="0.1 0.2 0.3 0.4"
+#FOVs="0.4"
+#FOVs="0.4 0.6 0.8 1.0"
+FOV="0.4"
+
+#RDNOISEs="1 10 20 30 40 50"
+RDNOISEs="10"
+
+IOCOpowerform=0 # 0 broken (pessimistic), 1 uniform (optimistic)
+#Parameters for the cumulative density function
+Q1="-3.3" #slope of the largest radius portion of the function (r>rknee1)
+Q2="-2.5" #slope of the smallest radius portion of the function (r<rknee2)
+RKNEE1=30 #larger of the two rknee values
+RKNEE2=5 #smaller of the two rknee values
+N0s="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20" #value of the normalization constant
+
+Nrun=0
+for N0 in $N0s
+do
+
+for RDNOISE in $RDNOISEs
+do
+    PREFIX="rdnoise${RDNOISE}"
+    PREFIX="doh2.5"
+    PREFIX=""
+    for APER in $APERTUREs
+    do
+	./evalTarget.pl $DIST $Av $Ebmv $LAMLO $LAMHI $APER $THRU $RDNOISE $HZ $RAWPHOT $RAcol:$Deccol:$Vcol:$BmVcol $FOV $IOCOpowerform $Nrun $RA $DEC $Q1 $Q2 $RKNEE1 $RKNEE2 $N0 $PREFIX
+    
+done
+done
+
+done
+
+exit 0

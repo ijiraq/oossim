@@ -1,0 +1,11 @@
+diameter 2.0
+metallicity 0
+specname none
+exposure 0.025
+pitch 1
+coating Aluminum
+detector BkTh
+design perf
+filter y
+wave1 0.3
+wave2 0.9

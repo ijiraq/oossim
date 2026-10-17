@@ -1,0 +1,40 @@
+CATALOGUE NOTES
+
+---M35---------------------------------
+
+NOMAD:
+- NOMAD catalogue was investigated as a possible alternative to Sung et al. (1999)
+- NOMAD contained considerably more star data than Sung catalogue
+- However, upon matching stars with Sung catalogue, extreme differences in magnitude  were present (Sung was assumed to be more accurate)
+- Diferences exhibited large variance, and thus was unsystematic. This is to be expected  as NOMAD is a composite of many different individual catalogues.
+- Due to large variance in differences, NOMAD was tossed
+
+SUNG:
+- As of October 2008, Sung catalogue remains the best source
+- Sung catalogue's photometry is measured apparent magnitudes, and thus do not need reddening performed on them.
+
+
+---M25---------------------------------
+
+Guide Star Photometric Cataloge v 2.4 (Bucciarelli, 2001):
+- No sources with V magnitudes brighter than 13.5. Since magnitude cutoff for M35 was 14.5, only  14 feasible sources were available
+
+NOMAD:	
+- Revisited NOMAD, but same problems persist as for M35 
+
+MOSAIC:
+- Current M25 catalogue, Mosaic, was constructed using Tycho-2 data, MegaPrime data from CADC archives, and Stellar Clasification Library (Skiff, 2007)
+- original catalogues can be found in trunk/catalogues/m25/
+
+
+---M37---------------------------------
+
+
+
+
+---M38---------------------------------
+
+
+
+
+---M46---------------------------------

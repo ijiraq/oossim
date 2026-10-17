@@ -1,0 +1,19 @@
+%.o : %.f 
+	$(FC) -c $(FFLAGS) $<
+
+# the objects
+wobjects := makespec parse util
+wobjects := $(addsuffix .o,$(wobjects))
+makespec : $(wobjects)
+	$(FC) $(FFLAGS) -o makespec $(wobjects)
+	
+.PHONY : clean
+clean :
+	rm *.o
+	
+
+
+
+
+
+	

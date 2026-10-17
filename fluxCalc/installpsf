@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+
+$system = "Linux";    # (either "Linux" or "Sun")
+$compiler = "f77";  # (either "f77" or "g77") 
+
+# Make PSF stuff 
+print "Making psf package\n\n";
+
+if ($compiler=~/f77/) {$flags="-e -O3"}
+if ($compiler=~/g77/) {$flags="-O3"}
+
+open MAKEFILE,'>Makefile1';
+print MAKEFILE "
+FC = $compiler
+FFLAGS = $flags
+";
+close MAKEFILE;
+
+system "cat Makefile1 Makefile2 >Makefile";
+system "make makespec";
+
+print "Made makespec package\n\n";

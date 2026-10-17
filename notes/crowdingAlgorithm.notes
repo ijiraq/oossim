@@ -1,0 +1,7 @@
+- from star 1 location, calculate energy efficiency (e.e.) for 3x3 pixel box around star
+- calculate e.e. for 7x7 pixel box and subtract e.e. from 3x3 box to obtain 'waste'
+- determine if any other stars are located within 7x7 box
+	- is the star high enough magnitude to matter?
+- based on location of star 2 in 7x7 box, determine number of pixels in star 2's 3x3 box that overlap with 7x7 box of star 1
+- use pixel overlap to determine % of star 1 flux contributing to star 2 noise
+- output results to database

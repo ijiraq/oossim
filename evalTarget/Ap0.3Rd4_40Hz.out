@@ -1,0 +1,36 @@
++ RAWPHOT=sung1999_MNRAS.306.361.dat
++ Vcol=11
++ BmVcol=13
++ RAcol=18
++ Deccol=19
++ DIST=816
++ Ebmv=0.255
++ Av=0.79
++ RA=92.27
++ DEC=24.34
++ OBSDATE=2008/12/23
++ HZ=40
++ THRU=0.975
++ LAMLO=4.0e-7
++ LAMHI=8.0e-7
++ ORBHEIGHT=700
++ APERTUREs=0.30
++ FOV=0.4
++ RDNOISEs=4
++ PIXSIZEMIC=8.0
++ FNUM=5.78
++ DICHROIC=0
++ IOCOpowerform=0
++ Q1=-3.8
++ Q2=-1.0
++ Q3=-2.5
++ ALBEDO=0.07
++ RKNEEWIDTH=1.176
++ Nrun=0
++ for RDNOISE in '$RDNOISEs'
++ PREFIX=rdnoise4
++ PREFIX=doh2.5
++ PREFIX=
++ for APER in '$APERTUREs'
++ ./evalTarget.pl 816 0.79 0.255 4.0e-7 8.0e-7 0.30 0.975 4 40 8.0 5.78 0 sung1999_MNRAS.306.361.dat 18:19:11:13 0.4 700 0 0 92.27 24.34 -3.8 -1.0 -2.5 0.07 1.176 2008/12/23
+Adding parameters to makespec.par.hard...

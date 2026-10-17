@@ -1,0 +1,41 @@
+---------------------------------------------------------
+This file is for general notes on the project. 
+For notes on things to be done, look in the trunk/to-do dir.
+--------------------------------------------------------
+
+MAGNITUDE TREATMENT ISSUE
+
+---makeFresFiles.pl-------------------------------------OK
+
+- magnitudes are determined from hypothetical absolute magnitudes (Carrol and Ostlie data) and added to distance modulus, calculated from physical distance (pc) given in run.sh
+- assumes distance is not calculated from appparent magnitudes, but rather from de-reddened ones...i.e. accurate
+- makes Fresnel files using bandpass wavelengths, hypothetical apparent visual magnitude (dereddened), spectral type and distance (AU) to KB or OC
+
+
+---makeStarDB.pl----------------------------------------OK
+
+- parses original catalogue of apparent V and apparent B-V values
+- uses distance modulus and reddening to determine absolute V
+- dereddens B-V
+- compares absolute V and dereddened B-V w/ Carrol and Ostlie data to determine stellar type and Teff
+- uses apparent V and Teff to determine flux w/ fluxCalc
+- makes star database with following info: Stellar Type, Apparent V, Dereddened B-V, Teff, Absolute V, Radius of star (Radians), Flux in photons/sec/m^2, Star Code, RA and Dec
+
+
+---runKomplete.pl---------------------------------------OK
+
+- iterates through each main sequence spectral type
+- pulls out data from Carrol and Ostlie source
+- constructs apparent visual magnitude by adding reddening and distance modulus to absolute magnitude
+- uses this apparent visual magnitude and Teff to calculate theoretical flux value for each spectral type at said distance using fluxCalc
+- uses flux value to calculate statistical parameters of PSF
+
+
+---fitRminBmax.pl---------------------------------------OK
+
+- magnitudes not used
+
+---getRates.pl------------------------------------------OK
+
+- at end of script, uses distance to determine distmod
+- addes distmod and Av to the absolute magnitude of the limiting magnitude for a particular aperture size, which is then printed out

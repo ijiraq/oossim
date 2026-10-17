@@ -1,0 +1,74 @@
+--------------------------------------------------------------------------
+README file for fluxCalc component of OOSSIM
+Created Sept 25, 2008 by Thomas Johnson
+--------------------------------------------------------------------------
+
+The makespec program is designed to calculate flux received from a star
+given its apparent magnitude, effective temperature, metallicity, and a
+host of parameters regarding the telescope design: diameter, exposure
+time, pitch(arcseconds per pixel), mirror coating, detector type, mirror 
+geometry and bandpass filter parameters. The output of the program, sent
+to standard output, is the number of incident photons.
+
+INSTALLATION--------------------------------------------------------------
+
+1. Ensure you have either f77 or g77 installed as a FORTRAN compiler. 
+   This can be tested with the command "which f77" or "which g77".
+	- If neither exists on your machine, go to 
+	  www.gnu.org/software/fortran/fortran.html to download the 
+	  g77 compiler.
+	- Be sure to install it into a directory contained in the PATH
+	  environment variable
+
+2. Open 'fluxCalc/Makefile' and uncomment the lines pertaining to the
+   compiler you installed. I.e. there are two lines for f77 and two for
+   g77. Which lines you use depend on which compiler you installed.
+
+3. In the fluxCalc directory type "make" to compile the programs. If
+   all goes well, you should see a bunch of .o files in the fluxCalc
+   directory. If not, ensure the compiler has been installed properly
+   and is in a PATH directory.
+
+4. In your shell configuration file, set the environment variable
+   FLUXCALC to the directory you have installed the program in. E.g.
+   if the program resides in /working/oossim/fluxCalc/ and you use bash as
+   your shell, add the following line to ~/.bashrc:
+	export FLUXCALC=/working/oossim/fluxCalc
+
+
+---------------------------------------------------------------------------
+
+For detailed workings on the program, please visit the website of the
+primary programmer, Steven Gwyn: 
+
+	http://www.astro.uvic.ca/grads/gwyn/ngst/docuphot.html
+
+The sections on flux-calculations are the only ones relevant as the
+makespec utility was a component of a larger suite of utilities which have
+not been used here.
+
+RELEVANT END-USER INFORMATION----------------------------------------------
+
+1. The various parameters of the simulated telescope are all laid out in
+   the makespec.par.hard and makespec.par files. the "hard" variables are
+   the ones that are specific to the telescope, and will not change during
+   the Occultation Simulation. The non-hard variables are the stellar type
+   (or effective temperature) and the visual magnitude.
+
+2. All of the relevant libraries of data are contained in the data folder.
+   Specifics: QE of CCD detector, flux vs. wavelength tables for different
+   stellar types, reflectivities of different primary mirror materials.
+   Wavelengths are in microns and response functions are in fractions.
+
+3. The current set-up is to use Teff instead of the stellar type, with the
+   corresponding information contained in the t#####m00.norm.form files. The
+   library comes from LeJeune et al., 1997.
+
+4. If one wishes to simply run the fluxCalc on its own, the program 
+   'makespec' is what does the actual calculation. Note that one must first
+   specify the variables in makespec.par.hard and makespec.par before 
+   running. The output will be printed as a simple exponential number,
+   representing the number of photons incident on the detector per frame
+   (i.e. integrated over the exposure time).
+
+---------------------------------------------------------------------------

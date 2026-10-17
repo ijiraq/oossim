@@ -1,0 +1,58 @@
+10
+
+dir
+59
+file:///staging/cadc/6/kavelaar/svnrepo/oossim/trunk/jobs
+file:///staging/cadc/6/kavelaar/svnrepo
+
+
+
+2008-11-07T00:54:30.844880Z
+46
+johnsont
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3799bf90-cd66-483d-a285-521c6e47ad18
+
+job-m25-standard.csh
+file
+
+
+
+
+2009-01-23T16:52:26.000000Z
+e98d4103f3e2cd4fe4eb0cf084d515dd
+2008-11-07T00:54:30.844880Z
+46
+johnsont
+
+job-m35-standard.csh
+file
+
+
+
+
+2009-01-23T16:52:26.000000Z
+2893b7a65b4dc9cd78086987dff9c495
+2008-11-07T00:54:30.844880Z
+46
+johnsont
+
+poisson
+dir
+
+bandPass
+dir
+

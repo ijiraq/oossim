@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------
+README for oossim/notes/ directory.
+created on Dec 18, 2008 by Thomas Johnson
+thoimis@gmail.com
+----------------------------------------------------------------------------
+
+Files----------------------------------------------------
+
+catalogues.notes - a file for keeping track of different stellar catalogues being used in the simulator.
+
+crowdingAlgorithm.notes - general scratch pad for crowding problem - not really used yet.
+
+cumFuncAlbedo*.dat - files containing data for KBO density function for different albedo levels. Made using KBOdensity_doubleKnee.pl script.Used by sdf.sm
+
+density.sm - file for making main scientific requirement plot. Contains different data points of interest representing different telescope designs.
+
+general.notes - a general scratch pad for ideas, inquiries, etc. Use as you wish. Just don't erase what isn't yours.
+
+main-plot-data.ods - OpenOffice spreadsheet containing all the data points of interest for the main scientific requirement plot. See density.sm
+
+OOSSIM-Report-Figures.odt - A collection of various plots exploring the relationships between overall detection rate of OCLE-DOCLE and various design parameters.
+
+parameterArray.ods - spreadsheet containing all the data required for the plots mentioned in OOSSIM-Report-Figures.odt
+
+sdf.sm - main sm file for the main scientific requirement plot. References density.sm and 3 of the cumFuncAlbedo*.dat files
+
+---------------------------------------------------------

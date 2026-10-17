@@ -1,0 +1,31 @@
+ctype black
+ltype 0
+
+data  cumFuncAlbedo0.06.dat
+read { lr 1 ld 2 }  
+limits -1 1 -6 4
+#limits -1 1 -5 0 
+TICKSIZE -2 20 -10 100 
+box 
+connect lr ld
+data  cumFuncAlbedo0.10.dat
+read { lr1 1 ld1 2 } 
+connect lr1 ld1
+data  cumFuncAlbedo0.16.dat
+read { lr2 1 ld2 2 } 
+connect lr2 ld2 
+
+ltype 2
+#data  cumFuncAlbedo0.08noKnee.dat
+data  KBOdensityTable.dat
+read { lr3 1 ld3 2 } 
+connect lr3 ld3 
+
+ltype 4
+ctype red
+data cumFuncAlbedo0.06straightLine.dat
+read { lr4 1 ld4 2 }
+connect lr4 ld4
+
+ctype black
+input density.sm

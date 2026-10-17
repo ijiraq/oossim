@@ -1,0 +1,10 @@
+#
+#
+
+.PHONY: clean
+
+clean:
+	$(RM) -r [OBAFGKM][0-9]V 
+	$(RM) rate_????_?.??? starRates_????_?.??? starDB.dat mk.dat
+	$(RM) fov*
+	$(RM) *.log

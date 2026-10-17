@@ -1,0 +1,34 @@
+-----------------------------------------------------------------------
+README for oossim/evalTarget/ directory
+Created Dec 19, 2008 by Thomas Johnson
+thoimis@gmail.com
+-----------------------------------------------------------------------
+
+This directory contains the meat and bones of the OCLE-DOCLE simulator.
+
+
+Files------------------------------------------------------------------
+
+evalTarget.pl - The main perl script from which all the other scripts are called, i.e. fitRminBmax.pl, getRates.pl, makeFresFiles.pl, makeStarDB.pl, runKomplete.pl....
+
+fitRminBmax.pl - 
+
+getRate.pl - Antiquated. Do not use.
+
+getRates.pl - This script performs all the occultation rate calculations to produce the overall detection rate for the simulation.
+
+M25-MosaicCatalogue.dat - stellar catalogue for M25, comprised of a few different sources, put together via a main sequence-fitting technique. See oossim/notes/catalogues.notes for more information.
+
+makeFresFiles.pl - This script produces all of the templace Fresnel diffraction curves for different stellar types, creating corresponding directories and files to be used by other scripts.
+
+makeStarDB.pl - This script takes the stellar catalogue, extracts the information it needs, and then produces a database of info that is consistent for the other scripts. That way different stellar catalogues can be swapped in and out and the only needed changes are the variables that point to the specific information neeeded; these are defined in run.sh.
+
+rateCat.sh - 
+
+runKomplete.pl - iterates through database created in makeStarDB.pl and creates occultation event time series with implanted read noise and exports them to files to be used by fitRminBmax.pl and getRates.pl
+
+run.sh - This is the script one uses to initiate the simulation and set or change parameters. See file for more info on individual parameters. Hint: to keep a record of the simulator's output, run the script as follows: "./run.sh >& logFile.log". That way the STDOUT and STDERR buffers are saved into logFile.log for the user's convenience.
+
+sung1999_MNRAS.306.361.dat - Stellar catalogue of M35, created my Sung et al. in 1999. More details can be found through a quick Vizier search.
+
+------------------------------------------------------------------------

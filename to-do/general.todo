@@ -1,0 +1,16 @@
+Stuff to do
+
+- add readme files for notes and evalTarget directories
+-- list of files and quick description, etc.
+
+- Develop catalogues for M35 and M25 with much wider FOV (1 degree diameter).
+
+- begin documentation process to ensure usability in the future
+-- overall install readme
+-- document jobSubmit.pl
+--- documentation on using the job queue 
+
+- Double check S.B.'s stellar classification algorithm with the Skiff dataset
+
+- Develop catalogues for M44, M21, M48
+- Develop crowding algorithm as discussed with JJ

@@ -1,0 +1,181 @@
+10
+
+dir
+59
+file:///staging/cadc/6/kavelaar/svnrepo/oossim/trunk
+file:///staging/cadc/6/kavelaar/svnrepo
+
+
+
+2009-02-07T18:15:55.212477Z
+58
+kavelaar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3799bf90-cd66-483d-a285-521c6e47ad18
+
+sataccess_stuff
+dir
+
+to-do
+dir
+
+analysis
+dir
+
+obsDateList.dat
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+7777304eefc1e65784e3cdce6892a2ff
+2008-11-27T03:02:53.488091Z
+48
+johnsont
+
+rdnoise-col.dat
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+48a24b70a0b376535542b996af517398
+2008-12-19T21:19:46.407121Z
+52
+johnsont
+
+Canalysis
+dir
+
+catalogues
+dir
+
+notes
+dir
+
+jobs
+dir
+
+README
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+00060b09956b060f6a31c69e0184a5f8
+2008-11-27T21:25:52.748832Z
+49
+johnsont
+
+evalTarget
+dir
+
+fluxCalc
+dir
+
+utility
+dir
+
+hz-col.dat
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+9f5cf44a0c82bd1ca537a7ac769e9547
+2008-12-20T00:47:31.638511Z
+53
+johnsont
+
+rknee1-col.dat
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+60aa82f0a18e92de55d84128cae6b0fa
+2008-11-27T21:25:52.748832Z
+49
+johnsont
+
+jobSubmit.pl
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+3d37ae7e48c57a4db234c93ca57469b7
+2008-12-20T00:47:31.638511Z
+53
+johnsont
+
+albedo-col.dat
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+744ee2f0534db89e3e895c8813318a40
+2008-11-27T21:25:52.748832Z
+49
+johnsont
+
+sge-command.txt
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+722d09913639a97c9de439cad122752d
+2008-10-23T23:46:49.152779Z
+31
+johnsont
+
+aper-col.dat
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+32bacc0681a74524dd1100c56bcbc834
+2008-12-17T23:15:51.180220Z
+51
+johnsont
+
+cdiffracSim
+dir
+
+lamhi-col.dat
+file
+
+
+
+
+2009-01-23T16:52:41.000000Z
+33d5e4d4c912d49961781b4429017062
+2008-12-17T18:11:51.977363Z
+50
+johnsont
+

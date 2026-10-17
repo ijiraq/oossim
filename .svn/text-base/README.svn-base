@@ -1,0 +1,92 @@
+--------------------------------------------------------------------------
+README file for OOSSIM
+Created Nov 27, 2008 by Thomas Johnson
+--------------------------------------------------------------------------
+
+Designed by Steve Bickerton, this program simulates the detection of
+Kuiper Belt Objects (KBOs) by serendipitous occultation of background
+stars. See Bickerton (2007) for a full run down of the methods employed
+here.
+
+The main user interface of the program is located in the evalTarget dir.
+These scripts tie all of the components together and perform the target
+evaluation, printing the results to standard output both for KBOs and
+Oort Cloud Objects (OCOs). Check out the README file in that dir for a
+more complete description of the different scripts and which ones are
+important to actually running the simulations. However, if one is wishing
+to run the simulation on the computing cluster at HIA, the script
+jobSubmit.pl was designed to automate this process, allowing for rapid
+creation and submission of jobs. Furthermore, a certain parameter can be
+varied over a range specified in some ASCII data file containing the
+specific values, separated by a carriage return (hitting 'enter'). Type
+./jobSubmit.pl at the console for the help message, or see below for more
+information.
+
+INSTALLATION-------------------------------------------------------------
+
+To install OOSSIM a number of steps must be taken, all of which may be 
+summarized in a few broad steps: setting up the environment, installing 
+the pre-requisite packages and libraries and compiling and installing the 
+libraries and executables.
+
+1. SETTING UP THE ENVIRONMENT
+
+Create the following directory structure in your home directory:
+
+~/usr
+~/usr/bin
+~/usr/include
+~/usr/lib
+~/usr/libperl
+~/usr/libperl/Local ***note the capital on Local
+
+Next set the following environment variables in the configuration file of
+whatever shell program you use. E.g. if you use csh, the file will be
+'~/.cshrc', or if you use bash the file will be '~/.bashrc'.
+
+FLUXCALC=/path/to/oossim/root/directory/fluxCalc
+PERL5LIB=${HOME}/usr/libperl
+
+Note that the manner in which environment variables are defined will depend
+on the type of shell you are using, so a quick google search to determine
+this would be smart.
+
+2. INSTALLING THE PREREQUISITES
+
+The following C libraries are needed by OOSSIM to function properly:
+
+Fastest Fourier Transform in the West - http://www.FFTW.org
+The GNU GSL Library for C and C++ - http://www.gnu.org/software/gsl/
+The FITSIO Library - http://heasarc.nasa.gov/lheasoft/fitsio/fitsio.html
+
+For the above libraries, the header files should be in ~/usr/include, the
+library files should go in ~/usr/lib and any executables should go in
+~/usr/bin. Ensure this is the case in the corresponding make files for each
+library before you install!
+
+One package of note that is also needed is scipy, a package of scientific
+tools for python. As of the most recent python versions it is included, so
+ensure your python installation is up to date.
+
+3. INSTALLING THE OOSSIM COMPONENTS
+
+The following section will assume the main OOSSIM installation is located
+at '~/OOSSIM/'
+
+~/OOSSIM/analysis and ~/OOSSIM/utility both contain numerous perl modules
+that need to be installed to the libperl/Local directory. This can be done
+by running 'make install' within each directory.
+
+~/OOSSIM/cdiffracsim and ~/OOSSIM/Canalysis are both written in C and must
+be compiled accordingly. 'make' will compile the programs, 'make test' will
+ensure the compilation was performed correctly and 'make install' will 
+copy the executables to ~/usr/bin
+
+~/OOSSIM/fluxCalc is written in Fortran, and must be compiled accordingly
+as well. Assuming one has g77 or f77 installed as fortran compilers, typing
+'make' in the directory is sufficient.
+
+Once the above steps have been completed, the scripts may be run from the
+~/OOSSIM/evalTarget directory. It is reccomended that the output be piped
+into a log file instead of the terminal as the amount of text printed is
+rather large. See ~/OOSSIM/evalTarget/README for more details.

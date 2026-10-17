@@ -1,0 +1,277 @@
+<?xml version='1.0'?>
+<VOTABLE version="1.1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.1 http://www.ivoa.net/xml/VOTable/v1.1"
+ xmlns="http://www.ivoa.net/xml/VOTable/v1.1">
+<!--
+ !  VOTable written by uk.ac.starlink.votable.VOTableWriter
+ !-->
+<RESOURCE>
+<TABLE name="Joined" nrows="39">
+<DESCRIPTION>
+The catalog of MK Spectral Types
+</DESCRIPTION>
+<PARAM arraysize="*" datatype="char" name="Match type" value="Pair match, best matched pairs only">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="*" datatype="char" name="Match algorithm" value="Sky">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="*" datatype="char" name="Join Type" value="2 not 1 (An output row only for rows which appear in the second table but are not matched in the first table)">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="*" datatype="char" name="First input table" value="4: M25-Tycho2-0.6DegBox.xml"/>
+<PARAM arraysize="*" datatype="char" name="Second input table" value="5: M25-SpectralTypeCatalogue-0.6DegBox.xml"/>
+<FIELD datatype="double" name="_RAJ2000" precision="5" ucd="pos.eq.ra;meta.main" unit="deg" width="9">
+<DESCRIPTION>Right ascension (FK5) Equinox=J2000. (computed by VizieR, not part of the original data)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="_DEJ2000" precision="5" ucd="pos.eq.dec;meta.main" unit="deg" width="9">
+<DESCRIPTION>Declination (FK5) Equinox=J2000. (computed by VizieR, not part of the original data)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="V" precision="2" ucd="phot.mag" unit="mag" width="5">
+<DESCRIPTION>? Magnitude, see passband in n_Mag</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="B-V_Johnsons" unit="mag">
+<DESCRIPTION>($10+0.476)</DESCRIPTION>
+</FIELD>
+<DATA>
+<TABLEDATA>
+  <TR>
+    <TD>277.85087</TD>
+    <TD>-19.15861</TD>
+    <TD>7.8</TD>
+    <TD>0.3259999940395355</TD>
+  </TR>
+  <TR>
+    <TD>277.90646</TD>
+    <TD>-19.08858</TD>
+    <TD>8.1</TD>
+    <TD>0.34600000476837156</TD>
+  </TR>
+  <TR>
+    <TD>278.0685</TD>
+    <TD>-19.21717</TD>
+    <TD>8.8</TD>
+    <TD>0.236000005364418</TD>
+  </TR>
+  <TR>
+    <TD>278.0685</TD>
+    <TD>-19.21717</TD>
+    <TD>8.8</TD>
+    <TD>0.21600000953674314</TD>
+  </TR>
+  <TR>
+    <TD>278.0685</TD>
+    <TD>-19.21717</TD>
+    <TD>8.8</TD>
+    <TD>0.2959999928474426</TD>
+  </TR>
+  <TR>
+    <TD>278.0685</TD>
+    <TD>-19.21717</TD>
+    <TD>8.8</TD>
+    <TD>0.30599999821186064</TD>
+  </TR>
+  <TR>
+    <TD>277.93042</TD>
+    <TD>-19.11725</TD>
+    <TD>8.8</TD>
+    <TD>0.34600000476837156</TD>
+  </TR>
+  <TR>
+    <TD>277.93042</TD>
+    <TD>-19.11725</TD>
+    <TD>8.8</TD>
+    <TD>0.34600000476837156</TD>
+  </TR>
+  <TR>
+    <TD>278.0685</TD>
+    <TD>-19.21717</TD>
+    <TD>8.8</TD>
+    <TD>0.34600000476837156</TD>
+  </TR>
+  <TR>
+    <TD>277.93042</TD>
+    <TD>-19.11725</TD>
+    <TD>8.8</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>277.96058</TD>
+    <TD>-19.16953</TD>
+    <TD>9.0</TD>
+    <TD>0.726</TD>
+  </TR>
+  <TR>
+    <TD>277.95375</TD>
+    <TD>-19.13083</TD>
+    <TD>9.1</TD>
+    <TD>0.3259999940395355</TD>
+  </TR>
+  <TR>
+    <TD>277.953</TD>
+    <TD>-19.11667</TD>
+    <TD>9.1</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>277.953</TD>
+    <TD>-19.11667</TD>
+    <TD>9.1</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>277.95375</TD>
+    <TD>-19.13083</TD>
+    <TD>9.1</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>277.867</TD>
+    <TD>-19.15081</TD>
+    <TD>9.2</TD>
+    <TD>0.4560000004470348</TD>
+  </TR>
+  <TR>
+    <TD>277.943</TD>
+    <TD>-19.15969</TD>
+    <TD>9.2</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>277.95375</TD>
+    <TD>-19.13083</TD>
+    <TD>9.3</TD>
+    <TD>0.3259999940395355</TD>
+  </TR>
+  <TR>
+    <TD>277.867</TD>
+    <TD>-19.15081</TD>
+    <TD>9.3</TD>
+    <TD>0.34600000476837156</TD>
+  </TR>
+  <TR>
+    <TD>277.867</TD>
+    <TD>-19.15081</TD>
+    <TD>9.3</TD>
+    <TD>0.40599999970197675</TD>
+  </TR>
+  <TR>
+    <TD>277.87046</TD>
+    <TD>-19.31314</TD>
+    <TD>9.8</TD>
+    <TD>0.27599999701976774</TD>
+  </TR>
+  <TR>
+    <TD>277.905</TD>
+    <TD>-19.1695</TD>
+    <TD>10.0</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>278.00992</TD>
+    <TD>-19.09256</TD>
+    <TD>10.1</TD>
+    <TD>0.48599999977648256</TD>
+  </TR>
+  <TR>
+    <TD>277.94304</TD>
+    <TD>-19.10872</TD>
+    <TD>10.1</TD>
+    <TD>0.34600000476837156</TD>
+  </TR>
+  <TR>
+    <TD>277.94304</TD>
+    <TD>-19.10872</TD>
+    <TD>10.1</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>277.89154</TD>
+    <TD>-19.26686</TD>
+    <TD>10.2</TD>
+    <TD>0.30599999821186064</TD>
+  </TR>
+  <TR>
+    <TD>278.04637</TD>
+    <TD>-19.34086</TD>
+    <TD>10.2</TD>
+    <TD>0.30599999821186064</TD>
+  </TR>
+  <TR>
+    <TD>277.89154</TD>
+    <TD>-19.26686</TD>
+    <TD>10.2</TD>
+    <TD>0.34600000476837156</TD>
+  </TR>
+  <TR>
+    <TD>277.93567</TD>
+    <TD>-19.12044</TD>
+    <TD>10.2</TD>
+    <TD>0.40599999970197675</TD>
+  </TR>
+  <TR>
+    <TD>277.7805</TD>
+    <TD>-19.10394</TD>
+    <TD>10.2</TD>
+    <TD>0.40599999970197675</TD>
+  </TR>
+  <TR>
+    <TD>278.02167</TD>
+    <TD>-19.16836</TD>
+    <TD>10.4</TD>
+    <TD>0.4560000004470348</TD>
+  </TR>
+  <TR>
+    <TD>277.93754</TD>
+    <TD>-19.08986</TD>
+    <TD>10.4</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>277.87812</TD>
+    <TD>-19.26461</TD>
+    <TD>10.4</TD>
+    <TD>0.40599999970197675</TD>
+  </TR>
+  <TR>
+    <TD>277.84683</TD>
+    <TD>-19.07408</TD>
+    <TD>10.5</TD>
+    <TD>0.34600000476837156</TD>
+  </TR>
+  <TR>
+    <TD>277.9075</TD>
+    <TD>-19.20189</TD>
+    <TD>10.5</TD>
+    <TD>0.3660000005960464</TD>
+  </TR>
+  <TR>
+    <TD>277.84683</TD>
+    <TD>-19.07408</TD>
+    <TD>10.5</TD>
+    <TD>0.40599999970197675</TD>
+  </TR>
+  <TR>
+    <TD>277.792</TD>
+    <TD>-19.12606</TD>
+    <TD>10.6</TD>
+    <TD>0.4560000004470348</TD>
+  </TR>
+  <TR>
+    <TD>278.15846</TD>
+    <TD>-19.1005</TD>
+    <TD>10.9</TD>
+    <TD>0.4560000004470348</TD>
+  </TR>
+  <TR>
+    <TD>277.75942</TD>
+    <TD>-19.13983</TD>
+    <TD>10.9</TD>
+    <TD>0.48599999977648256</TD>
+  </TR>
+</TABLEDATA>
+</DATA>
+</TABLE>
+</RESOURCE>
+</VOTABLE>
